@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-jshare-twitter" version="1.0.0" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>JShareTwitter</name>
+    <js-module name="JShareTwitter" src="www/JShareTwitter.js">
+        <clobbers target="cordova.plugins.JShareTwitter" />
+    </js-module>
+    
+    <preference name="TWITTER_CONSUMERKEY" />
+    <preference name="TWITTER_CONSUMERSECRET" />
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="JShareTwitter">
+                <param name="android-package" value="com.zgwit.cjshare.JShareTwitter" />
+            </feature>
+            <preference name="TWITTER_CONSUMERKEY" value="$TWITTER_CONSUMERKEY" />
+            <preference name="TWITTER_CONSUMERSECRET" value="$TWITTER_CONSUMERSECRET" />
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/JShareTwitter.java" target-dir="src/com/zgwit/jshare" />
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="JShareTwitter">
+                <param name="ios-package" value="JShareTwitter" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/JShareTwitter.m" />
+    </platform>
+</plugin>
