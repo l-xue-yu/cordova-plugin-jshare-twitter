@@ -1,11 +1,15 @@
 {
   "name": "cordova-plugin-jshare-twitter",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "twitter share for cordova plugin",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "jshare-Twitter",
+    "cordova-android"
+  ],
   "author": "",
   "license": "ISC"
 }

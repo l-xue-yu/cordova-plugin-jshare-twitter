@@ -3,9 +3,6 @@
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>JShareTwitter</name>
-    <js-module name="JShareTwitter" src="www/JShareTwitter.js">
-        <clobbers target="cordova.plugins.JShareTwitter" />
-    </js-module>
 
     <!--添加jcore依赖-->
     <dependency id="cordova-plugin-jshare" />
